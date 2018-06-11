@@ -1,4 +1,3 @@
-const config = require('./config.js');
 let loginQueue = [];
 let isLoginning = false;
 let sessionId = '';
@@ -119,7 +118,7 @@ function login() {
         if (r1.code) {
           // 获取sessionId
           requestP({
-            url: config.loginUrl,
+            url: 'http://wxlite.jack-lo.io/api/login',
             method: 'POST',
             data: {
               jsCode: r1.code
